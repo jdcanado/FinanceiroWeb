@@ -7,10 +7,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: "jdcanado.auth0.com",
     clientID: "xqd40qkWgHbT8AB0zBRDkfDNj117FPfp",
-    redirectUri:
-      process.env.NODE_ENV === "development"
-        ? "https://zl04pzl6z3.codesandbox.io/callback"
-        : "https://zl04pzl6z3.codesandbox.io/callback",
+    redirectUri: window.location.href + "callback",
     audience: "https://jdcanado.auth0.com/userinfo",
     responseType: "token id_token",
     scope: "openid"
