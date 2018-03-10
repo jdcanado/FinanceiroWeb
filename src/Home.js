@@ -12,6 +12,7 @@ import * as colors from "material-ui/colors";
 import Paper from "material-ui/Paper";
 import Button from "material-ui/Button";
 import DirectionsRunIcon from "material-ui-icons/DirectionsRun";
+import image from "../public/resources/images/logo_financeiro_web_275x85.png";
 
 const bgColor = colors["blueGrey"][900];
 const bgColorPaper = colors["blueGrey"][900];
@@ -21,7 +22,8 @@ const styles = theme => ({
     width: "100%"
   },
   flex: {
-    flex: 1
+    flex: 1,
+    marginTop: 15
   },
   menuButton: {
     marginLeft: -12,
@@ -35,7 +37,7 @@ const styles = theme => ({
   },
   barTop: {
     backgroundColor: bgColor,
-    height: 70
+    height: 90
   },
   button: {
     margin: theme.spacing.unit
@@ -71,12 +73,13 @@ class Home extends Component {
                 >
                   <MenuIcon />
                 </IconButton>
+
                 <Typography
                   type="title"
                   color="inherit"
                   className={classes.flex}
                 >
-                  Financeiro Web
+                  <img src={image} />
                 </Typography>
                 <IconButton color="primary" onClick={this.logout}>
                   <AccountCircle />
@@ -102,7 +105,7 @@ class Home extends Component {
                   color="inherit"
                   className={classes.flex}
                 >
-                  Financeiro Web
+                  <img src={image} />
                 </Typography>
                 <Button
                   onClick={this.login}
